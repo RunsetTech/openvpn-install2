@@ -268,7 +268,7 @@ function installQuestions() {
 	done
 	case $PORT_CHOICE in
 	1)
-		PORT="1194"
+		PORT="443"
 		;;
 	2)
 		until [[ $PORT =~ ^[0-9]+$ ]] && [ "$PORT" -ge 1 ] && [ "$PORT" -le 65535 ]; do
@@ -291,10 +291,10 @@ function installQuestions() {
 	done
 	case $PROTOCOL_CHOICE in
 	1)
-		PROTOCOL="udp"
+		PROTOCOL="tcp"
 		;;
 	2)
-		PROTOCOL="tcp"
+		PROTOCOL="udp"
 		;;
 	esac
 	echo ""
